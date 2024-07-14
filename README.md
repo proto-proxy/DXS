@@ -4,7 +4,7 @@ DXS is an open source hex swapper for Fortnite<br>
 It was made by **Prototbh** and **appelmoesGG**
 
 # Installation / usage:
-1. Download DXS from [here](https://proto-proxy.github.io/proto-proxy-web/) or [here](https://github.com/proto-proxy/DXS/releases/latest)(Download `Source Code (zip)`)
+1. Download DXS from [here](https://proto-proxy.github.io/proto-proxy-web/) or [here(latest version, used in tutorial)](https://github.com/appelmoesgg/DXS/releases/latest)(Download `Source Code (zip)`)
 2. Unzip the file you downloaded
 3. Run install.bat and then run dxs.pyw
 4. Click **Upload .fswap** and select the fswap you would like to use (swaps available [here](https://discord.gg/vkw9wuuX5z))
