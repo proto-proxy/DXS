@@ -14,9 +14,10 @@ It was made by **Prototbh** and **appelmoesGG**
 
 # Compile:
 In case the .pyw file is not working:
-1. Run compile-to-exe.bat
-2. You will now find a .exe in the `dist` folder
-3. Run that and DXS should run fine
+1. Make sure you already have ran the install.bat file!
+2. Run compile-to-exe.bat
+3. You will now find a .exe in the `dist` folder
+4. Run that and DXS should run fine
 
 # Still not working?
 - Join the [discord](https://discord.gg/vkw9wuuX5z) and ask in # [📖] Support
