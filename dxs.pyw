@@ -4,11 +4,15 @@ import mmap
 import tkinter as tk
 from tkinter import filedialog
 import requests
-from PIL import Image, ImageTk, ImageEnhance
+from PIL import Image, ImageTk
 import customtkinter
 from io import BytesIO
-import pywinstyles
+import pywinstyles 
+from PIL import ImageEnhance
 import threading
+
+scriptDir = os.path.dirname(__file__)
+
 
 customtkinter.set_appearance_mode("System")
 customtkinter.set_default_color_theme("blue")
@@ -31,9 +35,29 @@ def download_image(url):
     except Exception as e:
         print(f"Error downloading image from {url}: {e}")
         return None
+        
+def get_background(url):
+    backgroundPath=os.path.join(scriptDir, "background.png") 
+
+    if os.path.exists(backgroundPath):
+        print("Found image in script dir...")
+        return Image.open(backgroundPath)
+  
+    else:
+        print("Image not found in script dir, downloading...")
+        downloadedBackground = download_image(url)
+    
+        if downloadedBackground != None:
+            
+            downloadedBackground.save(backgroundPath, "png")
+    
+            return Image.open(backgroundPath)
+            
+        else:
+            return None
 
 background_url = "https://raw.githubusercontent.com/proto-proxy/gooners/main/image_2024-07-12_160138896.png"
-background_image = download_image(background_url)
+background_image = get_background(background_url)
 
 if background_image:
     enhancer = ImageEnhance.Brightness(background_image)
@@ -69,9 +93,9 @@ def hex_replace(file_path, search_hex, replace_hex):
         if found_at != -1:
             status_label.config(text="Swapping hex...")
             mmapped_file[found_at:found_at+len(search_bytes)] = replace_bytes
-            print_to_console("Replaced hex successfully")
+            print("Replaced hex successfully")
         else:
-            print_to_console("Failed to replace hex")
+            print("Failed to replace hex")
         
         mmapped_file.close()
 
@@ -87,14 +111,14 @@ def process_fswap(file_path):
                     search_hex = lines[2].strip()
                     replace_hex = lines[4].strip() if len(lines) > 4 else ""
                     hex_replace(pakchunk_path, search_hex, replace_hex)
-                    print_to_console(f"Processed .fswap file: {file_path}")
+                    print(f"Processed .fswap file: {file_path}")
                     swap_name = os.path.basename(file_path)
                     status_label.config(text=f"Done swapping ({swap_name})")
                 else:
-                    print_to_console("Invalid .fswap file format")
+                    print("Invalid .fswap file format")
                     status_label.config(text="Invalid .fswap file format")
             else:
-                print_to_console("Failed to find Fortnite installation path")
+                print("Failed to find Fortnite installation path")
                 status_label.config(text="Failed to find Fortnite installation path")
 
 def upload_fswap():
@@ -130,16 +154,12 @@ box_height = 125
 box_x = WIDTH - box_width - 20  
 box_y = HEIGHT - box_height - 20  
 
-scrollable_frame = customtkinter.CTkScrollableFrame(root, width=box_width, height=box_height, bg_color="black", fg_color="black")
-scrollable_frame.place(x=box_x, y=box_y)
+black_box = tk.Canvas(root, width=box_width, height=box_height, bg="black")
+black_box.place(x=box_x, y=box_y)
 
-def print_to_console(message):
-    label = tk.Label(scrollable_frame, text=message, fg="white", bg="black", font=("Burbank Big Condensed Black", 10), anchor="w", justify="left", borderwidth=0, highlightthickness=0)
-    label.pack(fill="x")
+status_label = tk.Label(black_box, text="", fg="white", bg="black", font=("Burbank Big Condensed Black", 10))
+status_label.place(relx=0.5, rely=0.5, anchor="center")
 
-status_label = tk.Label(scrollable_frame, text="", fg="white", bg="black", font=("Burbank Big Condensed Black", 10), borderwidth=0, highlightthickness=0)
-status_label.pack()
-
-pywinstyles.set_opacity(scrollable_frame, 0.53)
+pywinstyles.set_opacity(black_box, 0.53)
 
 root.mainloop()
