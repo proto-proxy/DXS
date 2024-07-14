@@ -4,11 +4,10 @@ import mmap
 import tkinter as tk
 from tkinter import filedialog
 import requests
-from PIL import Image, ImageTk
+from PIL import Image, ImageTk, ImageEnhance
 import customtkinter
 from io import BytesIO
 import pywinstyles 
-from PIL import ImageEnhance
 import threading
 
 scriptDir = os.path.dirname(__file__)
