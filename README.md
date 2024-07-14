@@ -12,7 +12,8 @@ It was made by **Prototbh** and **appelmoesGG**
 > To remove swaps: verify your game files...<br>
 > We are working on a reverse fswap file that removes your swap...
 
-# Compile:
+# Compile (compile-to-exe is experimental!):
+I wrote compile-to-exe.bat on my phone so it is not verified to work!
 In case the .pyw file is not working:
 1. Make sure you already have ran the install.bat file!
 2. Run compile-to-exe.bat
