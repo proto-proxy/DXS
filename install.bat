@@ -23,6 +23,8 @@ rem Install required Python packages
 echo Installing required Python packages...
 pip install customtkinter
 pip install pywinstyles
+pip install Pillow
+pip install requests
 
 echo All required packages installed successfully.
 echo Done. Press Enter to exit.
