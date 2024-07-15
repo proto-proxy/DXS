@@ -21,3 +21,11 @@ In case the .pyw file is not working:
 
 # Still not working?
 - Join the [discord](https://discord.gg/vkw9wuuX5z) and ask in # [📖] Support
+
+# TODO:
+|   Task                                                                 |   Completed   |   Date completed   |
+|   ---------------------------------------------------------------------|---------------|-----------------   |
+|   Reverse swaps                                                        |       ❌      |         N/A        |
+|   Video tutorial for installation / usage (for that one type of people)|       ❌      |         N/A        |
+|   Re-organise the UI (a bit)                                           |       ❌      |         N/A        |
+
