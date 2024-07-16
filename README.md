@@ -52,6 +52,7 @@ DXS — это программа обмена шестнадцатеричны�
 
 
 
+german -
 #DXS
 
 DXS ist ein Open-Source-Hex-Swapper für Fortnite<br>
