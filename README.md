@@ -32,4 +32,4 @@ In case the .pyw file is not working:
 |   Reverse swaps                                                        |       ❌      |         N/A        |
 |   Video tutorial for installation / usage (for that one type of people)|       ❌      |         N/A        |
 |   Re-organise the UI (a bit)                                           |       ❌      |         N/A        |
-
+|   Add a language switch button to DXS                                  |       ❌      |         N/A        |
