@@ -1,4 +1,4 @@
-english - 
+#english - 
 # DXS
 
 DXS is an open source hex swapper for Fortnite<br>
@@ -25,7 +25,12 @@ In case the .pyw file is not working:
 
 
 
-russian -
+
+
+
+
+
+#russian -
 # DXS
 
 DXS — это программа обмена шестнадцатеричным кодом с открытым исходным кодом для Fortnite<br>
@@ -52,7 +57,12 @@ DXS — это программа обмена шестнадцатеричны�
 
 
 
-german -
+
+
+
+
+
+#german -
 #DXS
 
 DXS ist ein Open-Source-Hex-Swapper für Fortnite<br>
