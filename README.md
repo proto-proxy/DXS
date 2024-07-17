@@ -10,9 +10,10 @@ Tutorials in other languages:
 # Installation / usage:
 1. Download DXS from [here](https://proto-proxy.github.io/proto-proxy-web/) or [here(latest version, used in tutorial)](https://github.com/appelmoesgg/DXS/releases/latest)(Download `Source Code (zip)`)
 2. Unzip the file you downloaded
-3. Run install.bat and then run dxs.pyw
-4. Click **Upload .fswap** and select the fswap you would like to use (swaps available [here](https://discord.gg/vkw9wuuX5z))
-5. Wait for it to load and your done!
+3. Run install.bat (make sure it said `All required packages installed successfully.`, if it didn't, run it again)
+4. Run dxs.pyw
+5. Click **Upload .fswap** and select the fswap you would like to use (swaps available [here](https://discord.gg/vkw9wuuX5z))
+6. Wait for it to load and your done!
 > To remove swaps: verify your game files...<br>
 > We are working on a reverse fswap file that removes your swap...
 
